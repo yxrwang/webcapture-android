@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Web Capture</string>
+    <string name="title_history">Capture History</string>
+    <string name="btn_go">Go</string>
+    <string name="btn_capture">Capture</string>
+    <string name="btn_history">History</string>
+    <string name="btn_delete">Delete</string>
+    <string name="no_history_placeholder_text">No capture yet</string>
+    <string name="hint_enter_url">Https://…</string>
+    <string name="btn_search">Search</string>
+    <string name="btn_clear">Clear</string>
+</resources>
