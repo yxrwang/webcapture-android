@@ -2,6 +2,7 @@ package au.com.arvis.webcapture.ui
 
 import android.app.Activity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -25,10 +26,22 @@ class HistoryActivity: AppCompatActivity(), OnHistoryItemClickListener, OnDelete
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Display back button on action bar
+        supportActionBar?.apply { setDisplayHomeAsUpEnabled(true) }
+
         setViewBinding()
         setupCaptureHistoryList()
         setupButtonClicks()
         loadCaptureHistory()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return if(item.itemId == android.R.id.home){
+            finish()
+            true
+        }else {
+            super.onOptionsItemSelected(item)
+        }
     }
 
     private fun setViewBinding(){
